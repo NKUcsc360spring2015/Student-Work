@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>50</y>
+      <w>310</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>Card
+--
+/+ CLUBS : int/
+/+ DIAMONDS : int/
+/+ SPADES : int/
+/+ HEARTS : int/
+/+ ACE : int/
+/+ JACK : int/
+/+ QUEEN : int/
+/+ KING : int/
+- rank: int
+- suit : int
+--
++ Card(rankIn: int, suitIn : int) 
+/+ makeRandomCard() : Card /
++ toString() : String
++ getRank() : int
++ getSuit() : int
++ equals(Card other) : boolean
++ hasSameRank(Card other) : boolean
++ hasSameSuit(Card other) : boolean
+
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>20</y>
+      <w>310</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>CardSet
+--
+/-USER_ACE : int/
+/+ NO_MATCH : int/
+--
++ CardSet(size :i) 
++ count() : int
++ cardInHand(Card card) : boolean
++ add(Card card) : void
++ discard(Card card) : Card
++ print() : void
++ findHighRank() : int
++ findLowRank() : int
++ findHighPairRank() : int
++ containsPair() : boolean
++ isFlush() : boolean
++ isStraight() : boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>320</x>
+      <y>20</y>
+      <w>190</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Note..
+bg=blue
+You will add private fields and methods to CardSet. If you add additional methods then they too must be private. </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>150</y>
+      <w>260</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1, hand
+m2=0..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;240.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>460</y>
+      <w>260</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>CardSetTest
+--
+--
++ test() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>270</y>
+      <w>120</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>100.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>360</y>
+      <w>220</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;200.0;10.0</additional_attributes>
+  </element>
+</diagram>
